@@ -44,6 +44,7 @@ public class Agregar extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         btnMenu = new rsbuttom.RSButtonMetro();
+        jlbSalir = new javax.swing.JLabel();
         pnlMenu = new javax.swing.JPanel();
         btnDiagrama = new rsbuttom.RSButtonMetro();
         btnGenerales = new rsbuttom.RSButtonMetro();
@@ -57,6 +58,8 @@ public class Agregar extends javax.swing.JFrame {
         pnlPrincipal = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1300, 650));
 
@@ -77,6 +80,16 @@ public class Agregar extends javax.swing.JFrame {
             }
         });
 
+        jlbSalir.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jlbSalir.setForeground(new java.awt.Color(255, 255, 255));
+        jlbSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlbSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons8-cerrar-ventana-32.png"))); // NOI18N
+        jlbSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jlbSalirMousePressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -84,13 +97,17 @@ public class Agregar extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -792,6 +809,11 @@ public class Agregar extends javax.swing.JFrame {
         this.btnDiagrama.setSelected(true);
     }//GEN-LAST:event_btnDiagramaMousePressed
 
+    private void jlbSalirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbSalirMousePressed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jlbSalirMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -809,6 +831,7 @@ public class Agregar extends javax.swing.JFrame {
     private rsbuttom.RSButtonMetro btnWhatif;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jlbSalir;
     private javax.swing.JPanel pnlCentro;
     private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlPrincipal;
